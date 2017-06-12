@@ -1,0 +1,143 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#CC000000"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/media_controller_controll_panel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="4dip">
+
+                <ImageButton
+                    android:id="@+id/media_controller_prev"
+                    style="@android:style/MediaButton.Previous"
+                    android:contentDescription="@string/description"
+                    android:visibility="gone"/>
+
+                <ImageButton
+                    android:id="@+id/media_controller_rew"
+                    style="@android:style/MediaButton.Rew"
+                    android:contentDescription="@string/description"/>
+
+                <ImageButton
+                    android:id="@+id/media_controller_pause"
+                    style="@android:style/MediaButton.Play"
+                    android:contentDescription="@string/description"/>
+
+                <ImageButton
+                    android:id="@+id/media_controller_ffwd"
+                    style="@android:style/MediaButton.Ffwd"
+                    android:contentDescription="@string/description"/>
+
+                <ImageButton
+                    android:id="@+id/media_controller_next"
+                    style="@android:style/MediaButton.Next"
+                    android:contentDescription="@string/description"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/media_controller_time_current"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_toRightOf="@+id/media_controller_controll_panel"
+                android:paddingLeft="4dip"
+                android:paddingRight="4dip"
+                android:paddingTop="4dip"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/media_controller_time_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/media_controller_time_current"
+                android:text="/"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/media_controller_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_toRightOf="@id/media_controller_time_divider"
+                android:paddingLeft="4dip"
+                android:paddingRight="4dip"
+                android:paddingTop="4dip"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <ImageButton
+                android:id="@+id/fullscreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="top"
+                android:layout_marginTop="-7dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/description"
+                android:paddingBottom="4dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="4dip"
+                android:paddingTop="4dip"/>
+            <LinearLayout
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/fullscreen"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/media_controller_volume_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableRight="@drawable/volume_state_selector"
+                    android:padding="10dp" />
+
+                <SeekBar
+                    android:id="@+id/media_controller_volume"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:indeterminate="false"
+                    android:progressDrawable="@drawable/seekbar_process_drawable"
+                    android:thumb="@drawable/progress_thumb_bar" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/media_controller_progress"
+        android:progressDrawable="@drawable/seekbar_process_drawable"
+        android:layout_width="fill_parent"
+        android:thumb="@drawable/progress_thumb_bar"
+        android:layout_height="16dp"/>
+
+</RelativeLayout>
