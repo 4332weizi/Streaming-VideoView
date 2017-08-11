@@ -5,10 +5,10 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.Window;
 
+import com.lyun.streaming.R;
 import com.lyun.widget.media.LYunVideoController;
 import com.lyun.widget.media.LYunVideoView;
 
-import net.funol.streaming.R;
 
 
 public class VideoActivity extends Activity {

@@ -36,7 +36,8 @@ import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
-import net.funol.streaming.R;
+
+import com.lyun.streaming.R;
 
 import java.lang.ref.WeakReference;
 import java.util.Formatter;
